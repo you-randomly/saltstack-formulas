@@ -1,5 +1,5 @@
 {% if opts['id'] in [
-    "consul-cp-1",
+    "consul-cp-0",
     "rp3",
     "rp0-1"
 ] %}
