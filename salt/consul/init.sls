@@ -1,3 +1,6 @@
+include:
+  - master
+
 hashicorp-repo:
   pkgrepo.managed:
     - humanname: hashicorp
