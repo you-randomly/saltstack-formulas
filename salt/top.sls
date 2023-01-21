@@ -1,5 +1,5 @@
 base:
   '*':
-  'consul:server'
+  'consul:server':
     - match: pillar
     - consul.master
