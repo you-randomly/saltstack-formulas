@@ -13,4 +13,4 @@ start-consul:
       - pkg: consul.consul-install
       - file: consul-master-node
 
-{% endif %}}
+{% endif %}
