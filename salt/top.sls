@@ -2,4 +2,4 @@ base:
   '*':
   'consul:server':
     - match: pillar
-    - consul.master
+    - consul.master.init
