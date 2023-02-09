@@ -36,6 +36,11 @@ client {
     read_only = false
   }
 
+  host_volume "audiobookshelf-meta" {
+    path = "/mnt/Nomad/audiobookshelf-meta"
+    read_only = false
+  }
+
   host_volume "audiobooks" {
     path = "/mnt/Media/audiobooks"
     read_only = false
@@ -85,6 +90,27 @@ client {
     path = "/mnt/Nomad/Calibre/web"
     read_only = false
   }
+
+  host_volume "treafik" {
+    path = "/mnt/Nomad/treafik"
+    read_only = false
+  }
+
+  host_volume "pi-hole-config" {
+    path = "/mnt/Nomad/pi-hole/pihole"
+    read_only = false
+  }
+
+  host_volume "pi-hole" {
+    path = "/mnt/Nomad/pi-hole/dnsmasq.d"
+    read_only = false
+  }
+
+  host_volume "portainer" {
+    path = "/mnt/Nomad/portainer"
+    read_only = false
+  }
+
 
 }
 

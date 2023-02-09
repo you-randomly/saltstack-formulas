@@ -15,4 +15,14 @@ start-nomad:
     - require: 
       - file: nomad-server-node
 
+nfs-install:
+  pkg.installed:
+    - name: nfs-common
+
+add-nfs-store:
+  file.append:
+    - name: /etc/fstab
+    - text:
+      - "192.168.2.184:/volume1/homes/jake-alun/nomad /mnt/Nomad-jobs/ nfs defaults 0 0"
+
 {% endif %}
