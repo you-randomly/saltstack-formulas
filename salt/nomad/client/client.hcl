@@ -111,7 +111,7 @@ client {
     read_only = false
   }
 
-  host_volume "bind9-condif" {
+  host_volume "bind9-condig" {
     path = "/mnt/Nomad/bind9/config"
     read_only = false
   }
