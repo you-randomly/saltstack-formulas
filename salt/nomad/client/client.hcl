@@ -111,6 +111,20 @@ client {
     read_only = false
   }
 
+  host_volume "bind9-condif" {
+    path = "/mnt/Nomad/bind9/config"
+    read_only = false
+  }
+
+  host_volume "bind9-cache" {
+    path = "/mnt/Nomad/bind9/cache"
+    read_only = false
+  }
+
+  host_volume "bind9-records" {
+    path = "/mnt/Nomad/bind9/records"
+    read_only = false
+  }
 
 }
 
