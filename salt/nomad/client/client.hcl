@@ -6,7 +6,7 @@ bind_addr = "0.0.0.0"
 client {
   enabled = true
   servers = [
-{% for server, addrs in salt['mine.get']('consul:server','network.ip_addrs', tgt_type='pillar')|dictsort() %}
+{% for server, addrs in salt['mine.get']('nomad:server','network.ip_addrs', tgt_type='pillar')|dictsort() %}
     "{{ addrs[0] }}",
 {% endfor %}
   ]
@@ -96,33 +96,18 @@ client {
     read_only = false
   }
 
-  host_volume "pi-hole-config" {
-    path = "/mnt/Nomad/pi-hole/pihole"
-    read_only = false
-  }
-
-  host_volume "pi-hole" {
-    path = "/mnt/Nomad/pi-hole/dnsmasq.d"
-    read_only = false
-  }
-
   host_volume "portainer" {
     path = "/mnt/Nomad/portainer"
     read_only = false
   }
 
-  host_volume "bind9-config" {
-    path = "/mnt/Nomad/bind9/config"
+  host_volume "adguard-workdir" {
+    path = "/mnt/Nomad/adguard/workdir"
     read_only = false
   }
 
-  host_volume "bind9-cache" {
-    path = "/mnt/Nomad/bind9/cache"
-    read_only = false
-  }
-
-  host_volume "bind9-records" {
-    path = "/mnt/Nomad/bind9/records"
+  host_volume "adguard-conf" {
+    path = "/mnt/Nomad/adguard/conf"
     read_only = false
   }
 
