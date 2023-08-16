@@ -111,6 +111,11 @@ client {
     read_only = false
   }
 
+  host_volume "drone-ci-data" {
+    path = "/mnt/Nomad/drone-ci"
+    read_only = false
+  }
+
 }
 
 plugin "raw_exec" {
