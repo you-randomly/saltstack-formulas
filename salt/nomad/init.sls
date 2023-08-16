@@ -1,6 +1,6 @@
 {# doesn't wwork for rp3 not sure why #}
 {% if not opts['id']  in ["rp3","rp4"] %}
-hashicorp-repo:
+hashicorp-nomad-repo:
   pkgrepo.managed:
     - humanname: hashicorp
     - name: deb https://apt.releases.hashicorp.com {{ grains["lsb_distrib_codename"] }} main
