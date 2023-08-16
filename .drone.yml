@@ -17,7 +17,6 @@ steps:
   - git pull
   - git checkout $DRONE_COMMIT
 
-steps:
 - name: salt apply
   commands:
   - salt '*' state.apply test=true
