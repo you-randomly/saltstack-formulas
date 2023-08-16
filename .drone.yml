@@ -8,6 +8,6 @@ platform:
   arch: amd64
 
 steps:
-- name: greeting
+- name: salt apply
   commands:
-  - echo testing
+  - salt '*' state.apply test=true
