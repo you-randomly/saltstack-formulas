@@ -7,6 +7,16 @@ platform:
   os: linux
   arch: amd64
 
+clone:
+  disable: true
+
+steps:
+- name: clone
+  commands:
+  - cd /srv/salty
+  - git pull
+  - git checkout $DRONE_COMMIT
+
 steps:
 - name: salt apply
   commands:
