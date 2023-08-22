@@ -14,8 +14,8 @@ steps:
 - name: clone
   commands:
   - cd /srv/salty
+  - git checkout main
   - git pull
-  - git checkout $DRONE_COMMIT
 
 - name: salt apply
   commands:
