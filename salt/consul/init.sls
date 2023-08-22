@@ -27,5 +27,5 @@ consul-install:
     - name: consul
     {% if not opts['id']  == "rp3" %}
     - require:
-      - pkgrepo: hashicorp-repo
+      - pkgrepo: hashicorp-consul-repo
     {% endif %}

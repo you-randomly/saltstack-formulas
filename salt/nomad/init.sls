@@ -14,5 +14,5 @@ nomad-install:
     - name: nomad
     {% if not opts['id']  == "rp3" %}
     - require:
-      - pkgrepo: hashicorp-repo
+      - pkgrepo: hashicorp-nomad-repo
     {% endif %}
