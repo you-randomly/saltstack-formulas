@@ -3,4 +3,6 @@ basic-packages:
     - pkgs:
       - lnav
       - jq
-      
+      - exa
+      - batcat
+      - fish
