@@ -2,8 +2,8 @@
     
 consul-master-node:
   file.managed:
-    - name: /etc/consul.d/master.hcl
-    - source: salt://consul/master/master.hcl
+    - name: /etc/consul.d/server.hcl
+    - source: salt://consul/server/server.hcl
     - makedirs: True
     - template: jinja
 
