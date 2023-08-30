@@ -5,12 +5,16 @@ base:
     - consul
     - nomad
 
-  'I@consul: server':
+  'consul: server':
+    - match: pillar
     - consul.master
-  'I@consul: client':
+  'consul: client':
+    - match: pillar
     - consul.client
   
-  'I@nomad: server':
+  'nomad: server':
+    - match: pillar
     - nomad.server
-  'I@nomad: client'
+  'nomad: client'
+    - match: pillar
     - nomad.client
