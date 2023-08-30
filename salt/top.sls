@@ -1,20 +1,20 @@
 base:
-  '*':
-    - basic
-    - salt-minion
-    - consul
-    - nomad
+    '*':
+        - basic
+        - consul
+        - nomad
+        - salt-minion
 
-  'consul: server':
-    - match: pillar
-    - consul.master
-  'consul: client':
-    - match: pillar
-    - consul.client
-  
-  'nomad: server':
-    - match: pillar
-    - nomad.server
-  'nomad: client'
-    - match: pillar
-    - nomad.client
+    'nomad:client':
+        - match: pillar
+        - nomad.client
+    'nomad:server':
+        - match: pillar
+        - nomad.server
+
+    'consul:client':
+        - match: pillar
+        - consul.client
+    'consul:server':
+        - match: pillar
+        - consul.server
