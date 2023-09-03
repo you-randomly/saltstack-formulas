@@ -116,6 +116,11 @@ client {
     read_only = false
   }
 
+  host_volume "syncthing-config" {
+    path = "/mnt/Nomad/syncthing"
+    read_only = false
+  }
+
 }
 
 plugin "raw_exec" {
