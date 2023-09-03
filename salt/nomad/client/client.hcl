@@ -121,6 +121,12 @@ client {
     read_only = false
   }
 
+  host_volume "davids-4k" {
+    path = "/mnt/Media/davids-4k"
+    read_only = false
+  }
+
+
 }
 
 plugin "raw_exec" {
