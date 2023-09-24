@@ -126,6 +126,25 @@ client {
     read_only = false
   }
 
+  host_volume "crowdsec" {
+    path = "/mnt/Nomad/crowdsec"
+    read_only = false
+  }
+
+  host_volume "crowdsec-data" {
+    path = "/mnt/Nomad/crowdsec/data"
+    read_only = false
+  }
+
+  host_volume "auth-log" {
+    path = "var/log/auth.log"
+    read_only = true
+  }
+
+  host_volume "crowdsec-logs" {
+    path = "mnt/Nomad/crowdsec/logs"
+    read_only = false
+  }
 
 }
 
